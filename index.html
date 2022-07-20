@@ -1,240 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <style>
-	#mainNavigationBar {
-		font-size: 20px;
-		font-family: Arial, Helvetica, sans-serif;
-		font-weight: bold;
-		//border-bottom: 2px solid rgb(245, 140, 40);
-		
-		//background-color: rgb(255, 155, 70);
-		
-		background: linear-gradient(rgb(255, 185, 120) 0%,
-									rgb(255, 165, 90) 48%,
-									rgb(255, 150, 70) 52%,
-									rgb(245, 140, 50) 100%);
-		
-	}
-	.flexBox {
-		display: flex;
-		display: -webkit-flex;
-		
-		flex-direction: row;
-		-webkit-flex-direction: row;
-		
-		flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		
-		justify-content: center;
-		
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.dropdown {
-		width: 140px;
-		height: 50px;
-		color: white;
-		text-shadow: 0px 1px 2px #444444;
-		//text-shadow: 0px 2px 1px #FFDD99;
-		
-		cursor: default;
-		
-		//background-color: white;
-		
-		margin-right: -2px;
-		
-		//border-style: solid;
-		//border-color: rgba(255, 255, 255, 0.2);
-		//border-width: 2px;
-		
-		border-right: 2px solid rgb(225, 120, 30);
-		border-left: 2px solid rgb(225, 120, 30);
-		
-		box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-	}
-	.topBarButton {
-		width: 134px;
-		height: 50px;
-		color: white;
-		text-shadow: 0px 1px 2px #444444;
-		//text-shadow: 0px 2px 1px #FFDD99;
-		
-		margin-right: -2px;
-		
-		//border-style: solid;
-		//border-color: rgba(255, 255, 255, 0.2);
-		//border-width: 2px;
-		
-		border-right: 2px solid rgb(225, 120, 30);
-		border-left: 2px solid rgb(225, 120, 30);
-		
-		box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-	}
-	.dropdownTextWrapper {
-		height:100%;
-		width: 100%;
-		line-height: 46px; // This is used to vertically center the text
-	}
-	.dropdownText {
-		width: 100%;
-		vertical-align: middle;
-		display: inline-block;
-		line-height: 1;
-		font-size: 15pt;
-		text-align: center;
-	}
-	.dropdownList {
-		position: relative;
-		text-shadow: none;
-		//top: 0px;
-		background-color: rgb(250, 250, 250);
-		width: 300px;
-		box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
-		z-index: 2;
-		font-weight: normal;
-		
-		display: block;
-		overflow: hidden;
-		
-		max-height: 0px;
-		-webkit-transition: max-height 0.1s linear;
-		-moz-transition: max-height 0.1s linear;
-		-o-transition: max-height 0.1s linear;
-		transition: max-height 0.1s linear;
-	}
-	.dropdownList a {
-		color: black;
-		padding: 8px 16px;
-		text-decoration: none;
-		display: block;
-		border-bottom: 1px solid #E0E0E0;
-	}
-	
-	.dropdownList a:hover {
-		background-color: rgb(230, 230, 230);
-	}
-	.topBarButton:hover {
-		background-color: rgba(255, 255, 255, 0.3);
-	}
-	.dropdown:hover {
-		background-color: rgba(255, 255, 255, 0.3);
-	}
-	.dropdown:hover div.dropdownList {
-		max-height: 290px;
-		
-		-webkit-transition: max-height 0.1s linear;
-		-moz-transition: max-height 0.1s linear;
-		-o-transition: max-height 0.1s linear;
-		transition: max-height 0.1s linear;
-	}
-</style>
-
-</head><body><div id="mainNavigationBar">
+  <link rel="stylesheet" href="navigation.css">
+<head>
+</head>
+<body>
+<div id="mainNavigationBar">
 	
 	<a href="/Homepage.html">
-		<div>Matthew Davis</div>
-  </a>
+		<div class="myName">Matthew Davis</div>
+  	</a>
 	
 	<div class="flexBox">
-		
-		<a class="topBarButton" href="/Homepage.html">
-			<div class="dropdownTextWrapper">
-				<span class="dropdownText">
-					Home
-				</span>
-			</div>
+		<a class="topBarButton" href="./index.html">
+			<p class = "topBarText">Home</p>
 		</a>
-		
-		<div class="dropdown">
-			<div class="dropdownTextWrapper">
-				<span class="dropdownText">
-					Programs
-				</span>
-			</div>
-			
-			<div class="dropdownList">
-				<a href="/DACOSChess.html">DACOS Chess Algorithm</a>
-				<!--<a href="#">Spectrogram</a>-->
-				<a href="/OtherPages/GaussLottery.html">The Gauss Lottery</a>
-				<a href="/OtherPages/GaussDetector.html">Mobile Gauss detector</a>
-				<a href="/OtherPages/PrimeInformaticist.html">The Prime Informaticist</a>
-				<a href="/OtherPages/JMUC.html">JMUC Original Compiler</a>
-				<a href="/OtherPages/StarMap.html">DW Star Map</a>
-				<!--<a href="#">Starfighter</a>-->
-				<!--<a href="#">Fluid flow simulator</a>-->
-			</div>
-		</div>
-		
-		<div class="dropdown">
-			<div class="dropdownTextWrapper">
-				<span class="dropdownText">
-					Browser demos
-				</span>
-			</div>
-			
-			<div class="dropdownList">
-				<a href="/Interactive/JuliaSet.html">Julia set animator</a>
-				<a href="/Interactive/JuliaSetASCII.html">ASCII Julia set animator</a>
-				<a href="/Interactive/WaveSimulation.html">Wave simulation</a>
-				<a href="/Interactive/ConwaysGame.html">Conway's game of life</a>
-				<a href="/Interactive/CursorEquation.html">Cursor following equation</a>
-				<a href="/Interactive/TicTacToe.html">Tic Tac Toe algorithm</a>
-				<a href="/Interactive/PerspectiveCube.html">3D cube</a>
-			</div>
-		</div>
-		
-		<div class="dropdown">
-			<div class="dropdownTextWrapper">
-				<span class="dropdownText">
-					Main pages
-				</span>
-			</div>
-			
-			<div class="dropdownList">
-				<a href="/GameDesign.html">Game development</a>
-				<a href="/GraphicsRendering.html">Graphics and rendering</a>
-				<a href="/HighSpeedVideo.html">High speed video</a>
-				<a href="/OtherPages/Astrophotography.html">Astrophotography</a>
-			</div>
-		</div>
-		
-		<div class="dropdown">
-			<div class="dropdownTextWrapper">
-				<span class="dropdownText">
-					Other pages
-				</span>
-			</div>
-			
-			<div class="dropdownList">
-				<a href="/OtherPages/Lizards.html">Lizards</a>
-				<a href="/OtherPages/Deepgauss.html">Deep-gauss constant</a>
-				<a href="/OtherPages/Constants.html">Weird Mathematical Constants</a>
-			</div>
-		</div>
-		
-		<a class="topBarButton" href="/Resume.html">
-			<div class="dropdownTextWrapper">
-				<span class="dropdownText">
-					Resumé
-				</span>
-			</div>
+		<a class="topBarButton" href="./pages/publications.html">
+			<p class = "topBarText">Publications</p>
 		</a>
-		
-		<a class="topBarButton" href="/Contact.html">
-			<div class="dropdownTextWrapper">
-				<span class="dropdownText">
-					Contact
-				</span>
-			</div>
+		<a class="topBarButton" href="./pages/projects.html">
+			<p class = "topBarText">Projects</p>
 		</a>
-		
-		<!-- This thing is just a spacer to move the flexbox toward the center of the window -->
-		<div style="width:80px; height:0px; float:left;"></div>
+		<a class="topBarButton" href="./pages/resume.html">
+			<p class = "topBarText">Resume/CV</p>
+		</a>
+		<a class="topBarButton" href="./pages/contact.html">
+			<p class = "topBarText">Contact Me</p>
+		</a>
 	</div>
-</div></body></html>
+		
+</div>
+</body>
+</html>
