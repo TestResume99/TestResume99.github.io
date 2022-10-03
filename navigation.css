@@ -63,7 +63,7 @@
 .img-md{
     width:  400px;
     height: 400px;
-    background-image: url(../img/mattdavis.jpg);
+    background-image: url(./img/mattdavis.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
